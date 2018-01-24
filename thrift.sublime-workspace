@@ -1,0 +1,609 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"T",
+				"TypeError"
+			],
+			[
+				"tt",
+				"ttypes"
+			],
+			[
+				"cl",
+				"close"
+			],
+			[
+				"log",
+				"login_token"
+			],
+			[
+				"a",
+				"AccountInfo"
+			],
+			[
+				"user",
+				"user"
+			],
+			[
+				"weight",
+				"weights"
+			],
+			[
+				"weigh",
+				"weights"
+			],
+			[
+				"B",
+				"BMI"
+			],
+			[
+				"we",
+				"weight"
+			],
+			[
+				"bl",
+				"blood_sugar"
+			],
+			[
+				"im",
+				"implicitly_wait"
+			],
+			[
+				"c",
+				"content-desc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "#coding=utf-8\nimport unittest ,time \nfrom appium import webdriver  \nfrom selenium.webdriver.common.keys import Keys\nfrom appium.webdriver.mobilecommand import MobileCommand\nimport time\nimport sys\nreload(sys)\nsys.setdefaultencoding('utf8')\n\ndesired_caps = {}\ndesired_caps['platformName'] = 'Android'\ndesired_caps['platformVersion'] = '7.1.1'\ndesired_caps['deviceName'] = '14105036c824342a078e'\ndesired_caps['appPackage'] = 'com.xikang.acornapppublichealth'\ndesired_caps['appActivity'] = 'com.xikang.acorncommonlib.Activity.ReadCardActivity'\n#desired_caps['unicodeKeyboard'] = False\ndriver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)\n\n\ndriver.find_element_by_id('com.xikang.acornapppublichealth:id/btn_select_resident').click()\ndriver.implicitly_wait(5)\n#contexts = driver.contexts\n#print contexts\ndriver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_filter_spinner\\\"]').click()\ndriver.implicitly_wait(5)\n\ndriver.find_element_by_xpath('//android.widget.TextView[@resource-id=\\\"com.xikang.acornapppublichealth:id/txtvSpinner\\\" and @text=\\\"姓名\\\"]').click()\n\ndriver.tap([(448,115),(884,165)])\n#print contexts\n#driver.back()\ntime.sleep(3)\n\ndriver.find_element_by_xpath('//android.widget.EditText[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_entry_text\\\"]').send_keys(u\"陶映阳\")\n\ndriver.implicitly_wait(5)\ndriver.find_element_by_xpath('//android.widget.Button[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_search_btn\\\"]').click()\n",
+			"file": "/C/Users/Administrator/Desktop/yitiji.py",
+			"file_size": 1591,
+			"file_write_time": 131611488773290283,
+			"settings":
+			{
+				"buffer_size": 1527,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "yyy.py",
+			"settings":
+			{
+				"buffer_size": 2362,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "yunjia.py",
+			"settings":
+			{
+				"buffer_size": 1858,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python_to_cmd.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python_to_cmd.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/Python_to_cmd.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/pythoncmd.sublime-build",
+					""
+				],
+				[
+					"Packages/User/pythoncmd.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/pythoncmd.sublime-build",
+					"RunInCommand"
+				]
+			],
+			[
+				"Packages/User/pythoncmd.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/untitled.sublime-build",
+					""
+				],
+				[
+					"Packages/User/untitled.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/untitled.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 269.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"123",
+			"111"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/thrift",
+		"/C/Users/Administrator/Desktop/test"
+	],
+	"file_history":
+	[
+		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/elementfinder.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/__init__.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/__init__.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/version.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/webdriver.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_touch.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_element.py",
+		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/switch_to.py",
+		"/D/代码/yyyweb.py",
+		"/D/代码/yyy.py",
+		"/D/代码/yyyautotest.py",
+		"/D/代码/yyyapp.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/switch_to.py",
+		"/C/Users/Administrator/Desktop/test/client_test.py",
+		"/C/Users/Administrator/Desktop/test/test.py",
+		"/D/thrift/client.py",
+		"/C/Users/Administrator/Desktop/test.py",
+		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webdriver.py",
+		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webelement.py",
+		"/D/代码/ikeeper_Android_auto.py",
+		"/C/Users/Administrator/Desktop/yitiji.py",
+		"/D/Python27/lib/site-packages/appium_python_client-0.24-py2.7.egg/appium/webdriver/errorhandler.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/webelement.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/mobilecommand.py",
+		"/D/代码/ikeeper-auto.py",
+		"/D/Python27/Lib/site-packages/assertpy/assertpy.py",
+		"/C/Users/Administrator/Desktop/client_test.py",
+		"/D/thrift/gen-py/ttypes.py",
+		"/D/thrift/gen-py/UserService.py",
+		"/D/Python27/lib/unittest/case.py",
+		"/E/Sublime Text Build 3126/Data/Packages/User/CTags.sublime-settings",
+		"/D/thrift/gen-py/com/xikang/protocol/user/UserService.py",
+		"/D/thrift/gen-py/XKCommon/ttypes.py",
+		"/D/thrift/gen-py/constants.py",
+		"/E/Sublime Text Build 3126/Data/Packages/DocBlockr/README.md",
+		"/E/Sublime Text Build 3126/Data/Packages/CTags/CTags.sublime-settings",
+		"/C/Users/Administrator/Desktop/unittest.py",
+		"/D/代码/run.py",
+		"/D/thrift/client_run.py",
+		"/D/代码/console.py",
+		"/D/代码/报告。py",
+		"/D/代码/global_list.py",
+		"/D/代码/yunjia.py",
+		"/D/代码/UserService1.py",
+		"/D/代码/testapp160620.py",
+		"/D/代码/test_cas.py",
+		"/D/代码/test.py",
+		"/D/代码/message.py",
+		"/D/代码/num.py",
+		"/D/代码/allrun.py",
+		"/D/代码/利息.py",
+		"/D/代码/ikeeper.py",
+		"/D/thrift/client_list.py",
+		"/C/Users/Administrator/Desktop/ikeeper-auto.py",
+		"/C/Users/Administrator/Desktop/ikeeper_Android_auto.py",
+		"/C/Users/Administrator/Desktop/message.py",
+		"/C/Users/Administrator/Desktop/111.py",
+		"/C/Users/Administrator/Desktop/start.py",
+		"/D/thrift/gen-py/com/xikang/protocol/user/ttypes.py",
+		"/C/Users/Administrator/Desktop/run.py",
+		"/C/Users/Administrator/Desktop/client_run.py",
+		"/C/Users/Administrator/Desktop/output.py",
+		"/D/thrift/2018-01-08.txt",
+		"/D/thrift/2018-01-08 15-28-29.txt",
+		"/D/thrift/2018-01-08 15-28-01.txt",
+		"/C/Users/Administrator/Desktop/ikeeper.py",
+		"/D/thrift/Log.txt",
+		"/D/thrift/Log",
+		"/D/thrift/2018-01-08 13-08-40.txt",
+		"/D/thrift/2018-01-08 13-08-00.txt",
+		"/D/thrift/2018-01-08 13-06-20.txt",
+		"/D/Python27/lib/site-packages/thrift/transport/TTransport.py",
+		"/D/thrift/2018-01-08 12-04-21.txt",
+		"/D/thrift/2018-01-08 11-19-12.txt",
+		"/D/thrift/2018-01-08 11-16-10.txt",
+		"/D/thrift/2018-01-08 11-05-00.txt",
+		"/D/thrift/log.txt",
+		"/D/thrift/gen-py/com/zt/ttypes.py",
+		"/D/thrift/gen-py/com/zt/UserService.py",
+		"/D/thrift/gen-py/user/ttypes.py",
+		"/D/thrift/gen-py/__init__.py",
+		"/D/thrift/gen-py/user/UserService.py",
+		"/D/Python27/Lib/site-packages/thrift/transport/THttpClient.py",
+		"/D/Python27/Lib/site-packages/thrift/protocol/TBinaryProtocol.py",
+		"/D/thrift/gen-py/com/xikang/protocol/user/constants.py",
+		"/D/yyyweb.py",
+		"/D/Python27/Lib/site-packages/thrift/transport/TTransport.py",
+		"/D/Python27/Lib/site-packages/thrift/compat.py",
+		"/D/thrift/gen-py/common/ttypes.py",
+		"/C/Users/Administrator/Desktop/console.py",
+		"/D/thrift_test/gen-py/hello/thrift_client.py",
+		"/D/thrift_test/gen-py/hello/ttypes.py",
+		"/D/thrift_test/gen-py/hello/thrift_server.py",
+		"/D/thrift_test/gen-py/hello/constants.py",
+		"/D/thrift_test/gen-py/hello/HelloService.py",
+		"/D/thrift_test/thrift_server.py",
+		"/D/thrift_test/tutorial_py_PythonServer.py",
+		"/D/thrift_test/thrift_client.py",
+		"/D/thrift_test/hello.py",
+		"/D/thrift/gen-py/com/xikang/protocol/common/ttypes.py",
+		"/D/thrift/gen-py/user/XKCommon.ttypes.py",
+		"/D/thrift/gen-py/parse/Parse.py",
+		"/D/thrift/gen-py/parse/ttypes.py",
+		"/D/thrift/gen-py/parse/__init__.py",
+		"/D/thrift/gen-py/parse/constants.py",
+		"/C/Users/Administrator/Desktop/client.py",
+		"/D/thrift/gen-py/user/client.py",
+		"/C/Users/Administrator/Desktop/Client.py",
+		"/C/Users/Administrator/Desktop/thrift_test.py",
+		"/E/Sublime Text Build 3126/Data/Packages/User/pythoncmd.sublime-build",
+		"/E/Sublime Text Build 3126/Data/Packages/User/python_to_cmd-build.sublime-build",
+		"/E/Sublime Text Build 3126/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/E/Sublime Text Build 3126/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/E/Sublime Text Build 3126/Data/Packages/SublimeREPL/config/Python/Main.sublime-menu",
+		"/C/Users/Administrator/Desktop/利息.py",
+		"/E/new/selenium-2.53.1/selenium-2.53.1/build/lib/selenium/webdriver/common/proxy.py",
+		"/C/Users/Administrator/Desktop/test_cas.py",
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/__init__.py",
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/__init__.py",
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/options.py",
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/webdriver.py",
+		"/D/app.py",
+		"/D/类、方法调用.py",
+		"/C/Users/Administrator/Desktop/ikeeper-Android auto.py",
+		"/D/testapp160620.py",
+		"/D/allrun.py",
+		"/D/yyy.py",
+		"/C/Users/Administrator/Desktop/ikeeper-益体机自动化.py"
+	],
+	"find":
+	{
+		"height": 53.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_find_by_default",
+			"Examples",
+			"positions",
+			"Usage",
+			"find",
+			"send",
+			"find",
+			"send",
+			"tap",
+			"alert",
+			"activity",
+			"wait",
+			"wait_activity",
+			"activ",
+			"activity",
+			"current_activity",
+			"current",
+			"activity",
+			"switch",
+			"'",
+			"AssertionBuilder",
+			"client",
+			"Client",
+			"client",
+			"Client",
+			"TBinaryProtocol",
+			"HealthServiceException",
+			"issubclass",
+			"callableObj",
+			"_AssertRaisesContext",
+			"a",
+			"Myxception",
+			"\\",
+			"    ",
+			"success",
+			"AccountInfo.thrift_spec",
+			"thrift_spec",
+			"login_result",
+			"com",
+			"transport",
+			"trans",
+			"thrift_spec",
+			"getusername",
+			"login",
+			"AccountInfo",
+			"xkcomm",
+			"Client",
+			"xkcom",
+			"userservice",
+			"e3"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Administrator/Desktop/yitiji.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								881,
+								881
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "yyy.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "yunjia.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								709,
+								709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 191.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "thrift.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}
