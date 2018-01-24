@@ -429,18 +429,18 @@
 						"selection":
 						[
 							[
-								36,
-								36
+								592,
+								592
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": true,
+							"is_init_dirty_state": false,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 324.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
