@@ -60,13 +60,11 @@
 	"buffers":
 	[
 		{
-			"contents": "#coding=utf-8\nimport unittest ,time \nfrom appium import webdriver  \nfrom selenium.webdriver.common.keys import Keys\nfrom appium.webdriver.mobilecommand import MobileCommand\nimport time\nimport sys\nreload(sys)\nsys.setdefaultencoding('utf8')\n\ndesired_caps = {}\ndesired_caps['platformName'] = 'Android'\ndesired_caps['platformVersion'] = '7.1.1'\ndesired_caps['deviceName'] = '14105036c824342a078e'\ndesired_caps['appPackage'] = 'com.xikang.acornapppublichealth'\ndesired_caps['appActivity'] = 'com.xikang.acorncommonlib.Activity.ReadCardActivity'\n#desired_caps['unicodeKeyboard'] = False\ndriver = webdriver.Remote('http://127.0.0.1:4723/wd/hub',desired_caps)\n\n\ndriver.find_element_by_id('com.xikang.acornapppublichealth:id/btn_select_resident').click()\ndriver.implicitly_wait(5)\n#contexts = driver.contexts\n#print contexts\ndriver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_filter_spinner\\\"]').click()\ndriver.implicitly_wait(5)\n\ndriver.find_element_by_xpath('//android.widget.TextView[@resource-id=\\\"com.xikang.acornapppublichealth:id/txtvSpinner\\\" and @text=\\\"姓名\\\"]').click()\n\ndriver.tap([(448,115),(884,165)])\n#print contexts\n#driver.back()\ntime.sleep(3)\n\ndriver.find_element_by_xpath('//android.widget.EditText[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_entry_text\\\"]').send_keys(u\"陶映阳\")\n\ndriver.implicitly_wait(5)\ndriver.find_element_by_xpath('//android.widget.Button[@resource-id=\\\"com.xikang.acornapppublichealth:id/resident_search_btn\\\"]').click()\n",
 			"file": "/C/Users/Administrator/Desktop/yitiji.py",
-			"file_size": 1591,
-			"file_write_time": 131611488773290283,
 			"settings":
 			{
-				"buffer_size": 1527,
+				"buffer_size": 1552,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -78,14 +76,6 @@
 			"settings":
 			{
 				"buffer_size": 976,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Administrator/Desktop/test.py",
-			"settings":
-			{
-				"buffer_size": 1476,
 				"line_ending": "Windows"
 			}
 		}
@@ -211,6 +201,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Administrator/Desktop/test.py",
 		"/D/代码/test.py",
 		"/D/代码/yunjia.py",
 		"/D/代码/yyy.py",
@@ -229,7 +220,6 @@
 		"/C/Users/Administrator/Desktop/test/client_test.py",
 		"/C/Users/Administrator/Desktop/test/test.py",
 		"/D/thrift/client.py",
-		"/C/Users/Administrator/Desktop/test.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webdriver.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webelement.py",
 		"/D/代码/ikeeper_Android_auto.py",
@@ -423,7 +413,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -432,15 +422,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1527,
+						"buffer_size": 1552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								881,
-								881
+								36,
+								36
 							]
 						],
 						"settings":
@@ -453,7 +443,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -484,36 +474,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Administrator/Desktop/test.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1476,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								803,
-								803
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -552,7 +512,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 191.0
+		"height": 197.0
 	},
 	"output.find_results":
 	{
