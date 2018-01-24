@@ -67,25 +67,25 @@
 			"settings":
 			{
 				"buffer_size": 1527,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "#coding = utf-8\n\nfrom thrift import Thrift   \n#from thrift.transport import TSocket  \nfrom thrift.transport import TTransport  \nfrom thrift.protocol import TBinaryProtocol  \nfrom thrift.transport import THttpClient \nimport time\nimport sys   \nsys.path.append('D:/thrift/gen-py')  \nimport ttypes\nimport UserService\nimport traceback\nimport logging\n\ntransport = THttpClient.THttpClient('10.32.173.200', 8085, '/XK_Phr_Proxy/UserServlet')  # ip  port projectname\ntransport = TTransport.TBufferedTransport(transport)\nprotocol = TBinaryProtocol.TBinaryProtocol(transport)\nclient = UserService.Client(protocol)\ntransport.open()  \n#log = open(time.strftime('%Y-%m-%d',time.localtime(time.time()))+\".txt\",'wb')\na = ttypes.AccountInfo()\na.userId = 'M5A1CFEDBE4B09F03008C774D'\na.accountName = '15040344536'\na.password = '123456'\na.deviceId = 'awifidc:44:27:96:e9:ea'\n\nprint 'start'\nassert client.getMemberHealthInfo('M5A1CFEDBE4B09F03008C774D') is not None\n\nprint 'end'\ntransport.close()\n",
-			"file": "/C/Users/Administrator/Desktop/client_test.py",
-			"file_size": 1008,
-			"file_write_time": 131607357468316311,
+			"file": "yyy.py",
 			"settings":
 			{
-				"buffer_size": 976,
+				"buffer_size": 2362,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/Administrator/Desktop/test.py",
+			"file": "yunjia.py",
 			"settings":
 			{
-				"buffer_size": 1476,
+				"buffer_size": 1858,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -211,9 +211,6 @@
 	],
 	"file_history":
 	[
-		"/D/代码/test.py",
-		"/D/代码/yunjia.py",
-		"/D/代码/yyy.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/elementfinder.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/__init__.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/__init__.py",
@@ -223,6 +220,7 @@
 		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_element.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/switch_to.py",
 		"/D/代码/yyyweb.py",
+		"/D/代码/yyy.py",
 		"/D/代码/yyyautotest.py",
 		"/D/代码/yyyapp.py",
 		"/D/Python27/Lib/site-packages/appium/webdriver/switch_to.py",
@@ -255,9 +253,11 @@
 		"/D/代码/console.py",
 		"/D/代码/报告。py",
 		"/D/代码/global_list.py",
+		"/D/代码/yunjia.py",
 		"/D/代码/UserService1.py",
 		"/D/代码/testapp160620.py",
 		"/D/代码/test_cas.py",
+		"/D/代码/test.py",
 		"/D/代码/message.py",
 		"/D/代码/num.py",
 		"/D/代码/allrun.py",
@@ -342,7 +342,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 53.0
 	},
 	"find_in_files":
 	{
@@ -423,7 +423,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -453,31 +453,31 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/Administrator/Desktop/client_test.py",
+					"file": "yyy.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 976,
+						"buffer_size": 2362,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								944,
-								944
+								171,
+								129
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": true,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -488,32 +488,32 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/C/Users/Administrator/Desktop/test.py",
+					"file": "yunjia.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1476,
+						"buffer_size": 1858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								803,
-								803
+								709,
+								709
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -521,7 +521,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 40.0
 	},
 	"input":
 	{
@@ -562,7 +562,7 @@
 	"project": "thrift.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 76.0
 	},
 	"save_all_on_build": true,
 	"select_file":
