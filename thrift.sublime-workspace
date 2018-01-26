@@ -78,6 +78,15 @@
 				"buffer_size": 976,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "/D/thrift/client.py",
+			"settings":
+			{
+				"buffer_size": 19463,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -201,6 +210,9 @@
 	],
 	"file_history":
 	[
+		"/D/thrift/gen-py/UserService.py",
+		"/D/thrift/gen-py/com/xikang/protocol/user/ttypes.py",
+		"/D/thrift/gen-py/ttypes.py",
 		"/C/Users/Administrator/Desktop/test.py",
 		"/D/代码/test.py",
 		"/D/代码/yunjia.py",
@@ -230,8 +242,6 @@
 		"/D/代码/ikeeper-auto.py",
 		"/D/Python27/Lib/site-packages/assertpy/assertpy.py",
 		"/C/Users/Administrator/Desktop/client_test.py",
-		"/D/thrift/gen-py/ttypes.py",
-		"/D/thrift/gen-py/UserService.py",
 		"/D/Python27/lib/unittest/case.py",
 		"/E/Sublime Text Build 3126/Data/Packages/User/CTags.sublime-settings",
 		"/D/thrift/gen-py/com/xikang/protocol/user/UserService.py",
@@ -259,7 +269,6 @@
 		"/C/Users/Administrator/Desktop/message.py",
 		"/C/Users/Administrator/Desktop/111.py",
 		"/C/Users/Administrator/Desktop/start.py",
-		"/D/thrift/gen-py/com/xikang/protocol/user/ttypes.py",
 		"/C/Users/Administrator/Desktop/run.py",
 		"/C/Users/Administrator/Desktop/client_run.py",
 		"/C/Users/Administrator/Desktop/output.py",
@@ -413,7 +422,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -429,8 +438,8 @@
 						"selection":
 						[
 							[
-								592,
-								592
+								253,
+								253
 							]
 						],
 						"settings":
@@ -440,10 +449,10 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -459,8 +468,8 @@
 						"selection":
 						[
 							[
-								944,
-								944
+								312,
+								312
 							]
 						],
 						"settings":
@@ -473,7 +482,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/thrift/client.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								293,
+								293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
