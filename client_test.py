@@ -1,5 +1,4 @@
 #coding = utf-8
-
 from thrift import Thrift   
 #from thrift.transport import TSocket  
 from thrift.transport import TTransport  
@@ -20,10 +19,11 @@ client = UserService.Client(protocol)
 transport.open()  
 #log = open(time.strftime('%Y-%m-%d',time.localtime(time.time()))+".txt",'wb')
 a = ttypes.AccountInfo()
-a.userId = 'M5A1CFEDBE4B09F03008C774D'
-a.accountName = '15040344536'
-a.password = '123456'
-a.deviceId = 'awifidc:44:27:96:e9:ea'
+a \
+    .userId = 'M5A1CFEDBE4B09F03008C774D' \
+    .accountName = '15040344536' \
+    .password = '123456' \
+    .deviceId = 'awifidc:44:27:96:e9:ea'
 
 print 'start'
 assert client.getMemberHealthInfo('M5A1CFEDBE4B09F03008C774D') is not None

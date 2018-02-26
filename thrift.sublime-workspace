@@ -4,16 +4,44 @@
 		"selected_items":
 		[
 			[
+				"conf",
+				"conf_sys"
+			],
+			[
+				"client",
+				"client_api_"
+			],
+			[
+				"ass",
+				"assert_exist"
+			],
+			[
+				"sui",
+				"suite2"
+			],
+			[
+				"cli",
+				"client_api_"
+			],
+			[
+				"client_",
+				"client_branch_design"
+			],
+			[
+				"clie",
+				"client_api"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
 				"T",
 				"TypeError"
 			],
 			[
 				"tt",
 				"ttypes"
-			],
-			[
-				"cl",
-				"close"
 			],
 			[
 				"log",
@@ -60,30 +88,22 @@
 	"buffers":
 	[
 		{
-			"file": "/C/Users/Administrator/Desktop/yitiji.py",
+			"contents": "# -*- coding: utf-8 -*-\n\nfrom thrift import Thrift\t\n#from thrift.transport import TSocket  \nfrom thrift.transport import TTransport  \nfrom thrift.protocol import TBinaryProtocol  \nfrom thrift.transport import THttpClient \nimport time\nimport sys\t\nreload(sys)\nsys.setdefaultencoding('utf8')\nsys.path.append('D:/thrift/gen-py')  \nimport ttypes\nimport UserService\nimport traceback\nimport logging\nimport unittest\nimport HTMLTestRunner\nimport assertpy  \nfrom config import *\nfrom client_api import client_api_\n\n\n\nclass test_findXKAccountByProofNum(unittest.TestCase,client_api_):\n#findXKAccountByProofNum\n\n\tdef setUp(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.open()\n\n\tdef teardown(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.close()\n\n\n\tdef test_normal_findXKAccountByProofNum(self):\n\n\t\ttry:\n\t\t\tassert self.findXKAccountByProofNum(self.identify) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\t\t\n\n\tdef test_long_findXKAccountByProofNum(self):\n\n\t\ttry:\n\t\t\tassert self.findXKAccountByProofNum(self.lonidentify) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\n\tdef test_short_findXKAccountByProofNum(self):\n\n\t\ttry:\n\t\t\tassert self.self.findXKAccountByProofNum(self.shoridentify) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_findXKAccountByProofNum(self):\n\n\t\ttry:\n\t\t\tassert self.findXKAccountByProofNum(self.mixidentify) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_findXKAccountByProofNum(self):\n\n\t\ttry:\n\t\t\tassert self.findXKAccountByProofNum(self.symidentify) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_registerAndBindAccount(unittest.TestCase,client_api_):\n#registerAndBindAccount\n\n\tdef setUp(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.open()\n\n\tdef teardown(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.close()\n\n\tdef test_normal_registerAndBindAccount(self):\n\n\n\t\ttry:\n\t\t\tassert self.registerAndBindAccount(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_registerAndBindAccount(self):\n\n\t\ttry:\n\t\t\tassert self.registerAndBindAccount(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\n\tdef test_short_registerAndBindAccount(self):\n\n\t\ttry:\n\t\t\tassert self.registerAndBindAccount(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_registerAndBindAccount(self):\n\n\t\ttry:\n\t\t\tassert self.registerAndBindAccount(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_bindDeviceByUserName(unittest.TestCase,client_api_):\n#bindDeviceByUserName\n\tdef setUp(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.open()\n\n\tdef teardown(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.close()\n\n\tdef test_normal_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.accountName,self.password,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_allwrong_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.lonaccountName,self.shorpassword,self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.lonaccountName,self.password,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.shoraccountName,self.password,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\n\tdef test_mix_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.mixaccountName,self.password,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.symaccountName,self.password,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\n\n\tdef test_longpsd_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.accountName,self.lonpassword,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_shortpsd_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.accountName,self.shorpassword,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mixpsd_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.accountName,self.mixpassword,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sympsd_bindDeviceByUserName(self):\n\n\t\ttry:\n\t\t\tassert self.bindDeviceByUserName(self.accountName,self.sympassword,self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_getAccountInfosByDeviceId(unittest.TestCase,conf_param):\n#getAccountInfosByDeviceId\n\tdef setUp(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.open()\n\n\tdef teardown(self):\n\t\ttransport = conf_sys().transport\n\t\ttransport.close()\n\n\tdef test_normal_getAccountInfosByDeviceId(self):\n\n\t\ttry:\t\n\t\t\tassert client_api_().getAccountInfosByDeviceId(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getAccountInfosByDeviceId(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getAccountInfosByDeviceId(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getAccountInfosByDeviceId(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getAccountInfosByDeviceId(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getAccountInfosByDeviceId(self):\n\t\ttry:\n\t\t\tassert client_api_().getAccountInfosByDeviceId(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_getDoctorInfoByDeviceID(unittest.TestCase,conf_param):\n#getDoctorInfoByDeviceID\n\t\n\tdef test_normal_getDoctorInfoByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getDoctorInfoByDeviceID(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_getDoctorInfoByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getDoctorInfoByDeviceID(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getDoctorInfoByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getDoctorInfoByDeviceID(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getDoctorInfoByDeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().getDoctorInfoByDeviceID(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_getRecipeListByDeviceID(unittest.TestCase,conf_param):\n#getRecipeListByDeviceID\n\t\n\tdef test_normal_getRecipeListByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getRecipeListByDeviceID(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getRecipeListByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getRecipeListByDeviceID(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getRecipeListByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getRecipeListByDeviceID(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getRecipeListByDeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().getRecipeListByDeviceID(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_getphotoBydeviceID(unittest.TestCase,conf_param):\n#getphotoBydeviceID\n\t\n\tdef test_normal_getphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getphotoBydeviceID(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getphotoBydeviceID(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getphotoBydeviceID(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getphotoBydeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().getphotoBydeviceID(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_checkBindStateByDeviceID(unittest.TestCase,conf_param):\n#checkBindStateByDeviceID\n\t\n\tdef test_normal_checkBindStateByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().checkBindStateByDeviceID(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_checkBindStateByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().checkBindStateByDeviceID(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_checkBindStateByDeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().checkBindStateByDeviceID(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_checkBindStateByDeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().checkBindStateByDeviceID(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\nclass test_getOutsideListByDeviceId(unittest.TestCase,conf_param):\n#getOutsideListByDeviceId\n\t\n\tdef test_normal_getOutsideListByDeviceId(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getOutsideListByDeviceId(self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getOutsideListByDeviceId(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getOutsideListByDeviceId(self.londeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getOutsideListByDeviceId(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getOutsideListByDeviceId(self.shordeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getOutsideListByDeviceId(self):\n\t\ttry:\n\t\t\tassert client_api_().getOutsideListByDeviceId(self.mixdeviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_getNewRecipeListByUserID(unittest.TestCase,conf_param):\n#getOutsideListByDeviceId\n\t\n\tdef test_normal_getNewRecipeListByUserID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewRecipeListByUserID(self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getNewRecipeListByUserID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewRecipeListByUserID(self.lonaccountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getNewRecipeListByUserID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewRecipeListByUserID(self.shoraccountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getNewRecipeListByUserID(self):\n\t\ttry:\n\t\t\tassert client_api_().getNewRecipeListByUserID(self.mixaccountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_getNewRecipeListByUserID(self):\n\t\ttry:\n\t\t\tassert client_api_().getNewRecipeListByUserID(self.symaccountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_getNewphotoBydeviceID(unittest.TestCase,conf_param):\n\n\tdef test_normal_getNewphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewphotoBydeviceID(self.deviceId,self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_getNewphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewphotoBydeviceID(self.deviceId,self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_getNewphotoBydeviceID(self):\n\n\t\ttry:\n\t\t\tassert client_api_().getNewphotoBydeviceID(self.deviceId,self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_getNewphotoBydeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().getNewphotoBydeviceID(self.deviceId,self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_getNewphotoBydeviceID(self):\n\t\ttry:\n\t\t\tassert client_api_().getNewphotoBydeviceID(self.deviceId,self.accountName) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_serviceCardLoginByCardNum(unittest.TestCase,conf_param):\n\n\tdef test_normal_serviceCardLoginByCardNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceCardLoginByCardNum(self.cardid) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_serviceCardLoginByCardNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceCardLoginByCardNum(self.loncardid) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_serviceCardLoginByCardNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceCardLoginByCardNum(self.shorcardid) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_serviceCardLoginByCardNum(self):\n\t\ttry:\n\t\t\tassert client_api_().serviceCardLoginByCardNum(self.mixcardid) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_serviceCardLoginByCardNum(self):\n\t\ttry:\n\t\t\tassert client_api_().serviceCardLoginByCardNum(self.symcardid) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\nclass test_serviceLoginByProofNum(unittest.TestCase,conf_param):\n\n\tdef test_normal_serviceLoginByProofNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceLoginByProofNum(self.identify, self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_long_serviceLoginByProofNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceLoginByProofNum(self.lonidentify, self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_short_serviceLoginByProofNum(self):\n\n\t\ttry:\n\t\t\tassert client_api_().serviceLoginByProofNum(self.shoridentify, self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_mix_serviceLoginByProofNum(self):\n\t\ttry:\n\t\t\tassert client_api_().serviceLoginByProofNum(self.mixidentify, self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\tdef test_sym_serviceLoginByProofNum(self):\n\t\ttry:\n\t\t\tassert client_api_().serviceLoginByProofNum(self.symidentify, self.deviceId) is not None\n\t\texcept BaseException , ex :\n\t\t\tself.error(ex)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nif __name__ == \"__main__\":\n\n\t#suite1 = unittest.TestLoader().loadTestsFromTestCase(client_branch)\n\tsuite2 = unittest.TestLoader().loadTestsFromTestCase(test_serviceLoginByProofNum)\n\t#unittest.TextTestRunner(verbosity=2).run(suite1)\n\tunittest.TextTestRunner(verbosity=2).run(suite2)\n\t#suite = unittest.makeSuite(client_branch_design) #运行类下面的test所有用例\n\t#suite = unittest.defaultTestLoader.discover('.','unit*.py') #运行当前目录下，以unit开头的所有用例\n\t#fr = open(localaddr,'wb')\n\t#runner = HTMLTestRunner.HTMLTestRunner(stream=fr,title='测试报告',description='测试报告详情')\n\t#runner.run(suite2)",
+			"file": "/D/thrift/client_branch_design.py",
+			"file_size": 15052,
+			"file_write_time": 131622728730578260,
 			"settings":
 			{
-				"buffer_size": 1552,
+				"buffer_size": 14458,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "#coding = utf-8\n\nfrom thrift import Thrift   \n#from thrift.transport import TSocket  \nfrom thrift.transport import TTransport  \nfrom thrift.protocol import TBinaryProtocol  \nfrom thrift.transport import THttpClient \nimport time\nimport sys   \nsys.path.append('D:/thrift/gen-py')  \nimport ttypes\nimport UserService\nimport traceback\nimport logging\n\ntransport = THttpClient.THttpClient('10.32.173.200', 8085, '/XK_Phr_Proxy/UserServlet')  # ip  port projectname\ntransport = TTransport.TBufferedTransport(transport)\nprotocol = TBinaryProtocol.TBinaryProtocol(transport)\nclient = UserService.Client(protocol)\ntransport.open()  \n#log = open(time.strftime('%Y-%m-%d',time.localtime(time.time()))+\".txt\",'wb')\na = ttypes.AccountInfo()\na.userId = 'M5A1CFEDBE4B09F03008C774D'\na.accountName = '15040344536'\na.password = '123456'\na.deviceId = 'awifidc:44:27:96:e9:ea'\n\nprint 'start'\nassert client.getMemberHealthInfo('M5A1CFEDBE4B09F03008C774D') is not None\n\nprint 'end'\ntransport.close()\n",
-			"file": "/C/Users/Administrator/Desktop/client_test.py",
-			"file_size": 1008,
-			"file_write_time": 131607357468316311,
+			"file": "/D/thrift/gen-py/config.py",
 			"settings":
 			{
-				"buffer_size": 976,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/thrift/client.py",
-			"settings":
-			{
-				"buffer_size": 19463,
+				"buffer_size": 2316,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -164,7 +184,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 269.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -210,45 +230,56 @@
 	],
 	"file_history":
 	[
+		"/D/thrift/client.py",
+		"/D/thrift/client_api.py",
 		"/D/thrift/gen-py/UserService.py",
-		"/D/thrift/gen-py/com/xikang/protocol/user/ttypes.py",
+		"/D/代码/修饰符.py",
+		"/C/Users/Administrator/Desktop/test/client_test.py",
+		"/C/Users/Administrator/Desktop/ikeeper_public.py",
+		"/C/Users/Administrator/Desktop/yitiji.py",
 		"/D/thrift/gen-py/ttypes.py",
+		"/D/thrift/config.py",
+		"/D/thrift/gen-py/constants.py",
+		"/D/thrift/gen-py/__init__.py",
+		"/D/Python27/Lib/site-packages/appium/saucetestcase.py",
+		"/D/Python27/Lib/site-packages/appium/__init__.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_element.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/elementfinder.py",
+		"/D/Python27/Lib/site-packages/AppiumLibrary/__init__.py",
+		"/C/Users/Administrator/Desktop/test/test.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/common/touch_action.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/webdriver.py",
 		"/C/Users/Administrator/Desktop/test.py",
 		"/D/代码/test.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/mobilecommand.py",
+		"/D/Python27/Lib/site-packages/appium/webdriver/switch_to.py",
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/switch_to.py",
+		"/D/thrift/gen-py/com/xikang/protocol/user/ttypes.py",
+		"/D/代码/ikeeper-auto.py",
+		"/D/代码/client_test.py",
+		"/C/Users/Administrator/Desktop/client_test.py",
+		"/E/Sublime Text Build 3126/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/E/Sublime Text Build 3126/Data/Packages/CTags/CTags.sublime-settings",
+		"/E/Sublime Text Build 3126/Data/Packages/User/CTags.sublime-settings",
 		"/D/代码/yunjia.py",
 		"/D/代码/yyy.py",
-		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/elementfinder.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/locators/__init__.py",
-		"/D/Python27/Lib/site-packages/AppiumLibrary/__init__.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/version.py",
-		"/D/Python27/Lib/site-packages/appium/webdriver/webdriver.py",
 		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_touch.py",
-		"/D/Python27/Lib/site-packages/AppiumLibrary/keywords/_element.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/switch_to.py",
 		"/D/代码/yyyweb.py",
 		"/D/代码/yyyautotest.py",
 		"/D/代码/yyyapp.py",
-		"/D/Python27/Lib/site-packages/appium/webdriver/switch_to.py",
-		"/C/Users/Administrator/Desktop/test/client_test.py",
-		"/C/Users/Administrator/Desktop/test/test.py",
-		"/D/thrift/client.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webdriver.py",
 		"/D/Python27/lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/remote/webelement.py",
 		"/D/代码/ikeeper_Android_auto.py",
-		"/C/Users/Administrator/Desktop/yitiji.py",
 		"/D/Python27/lib/site-packages/appium_python_client-0.24-py2.7.egg/appium/webdriver/errorhandler.py",
 		"/D/Python27/Lib/site-packages/appium/webdriver/webelement.py",
-		"/D/Python27/Lib/site-packages/appium/webdriver/mobilecommand.py",
-		"/D/代码/ikeeper-auto.py",
 		"/D/Python27/Lib/site-packages/assertpy/assertpy.py",
-		"/C/Users/Administrator/Desktop/client_test.py",
 		"/D/Python27/lib/unittest/case.py",
-		"/E/Sublime Text Build 3126/Data/Packages/User/CTags.sublime-settings",
 		"/D/thrift/gen-py/com/xikang/protocol/user/UserService.py",
 		"/D/thrift/gen-py/XKCommon/ttypes.py",
-		"/D/thrift/gen-py/constants.py",
 		"/E/Sublime Text Build 3126/Data/Packages/DocBlockr/README.md",
-		"/E/Sublime Text Build 3126/Data/Packages/CTags/CTags.sublime-settings",
 		"/C/Users/Administrator/Desktop/unittest.py",
 		"/D/代码/run.py",
 		"/D/thrift/client_run.py",
@@ -290,7 +321,6 @@
 		"/D/thrift/gen-py/com/zt/ttypes.py",
 		"/D/thrift/gen-py/com/zt/UserService.py",
 		"/D/thrift/gen-py/user/ttypes.py",
-		"/D/thrift/gen-py/__init__.py",
 		"/D/thrift/gen-py/user/UserService.py",
 		"/D/Python27/Lib/site-packages/thrift/transport/THttpClient.py",
 		"/D/Python27/Lib/site-packages/thrift/protocol/TBinaryProtocol.py",
@@ -322,26 +352,16 @@
 		"/E/Sublime Text Build 3126/Data/Packages/User/pythoncmd.sublime-build",
 		"/E/Sublime Text Build 3126/Data/Packages/User/python_to_cmd-build.sublime-build",
 		"/E/Sublime Text Build 3126/Data/Packages/Default/Default (Windows).sublime-keymap",
-		"/E/Sublime Text Build 3126/Data/Packages/User/Default (Windows).sublime-keymap",
 		"/E/Sublime Text Build 3126/Data/Packages/SublimeREPL/config/Python/Main.sublime-menu",
 		"/C/Users/Administrator/Desktop/利息.py",
 		"/E/new/selenium-2.53.1/selenium-2.53.1/build/lib/selenium/webdriver/common/proxy.py",
 		"/C/Users/Administrator/Desktop/test_cas.py",
 		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/__init__.py",
-		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/__init__.py",
-		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/options.py",
-		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/webdriver.py",
-		"/D/app.py",
-		"/D/类、方法调用.py",
-		"/C/Users/Administrator/Desktop/ikeeper-Android auto.py",
-		"/D/testapp160620.py",
-		"/D/allrun.py",
-		"/D/yyy.py",
-		"/C/Users/Administrator/Desktop/ikeeper-益体机自动化.py"
+		"/D/Python27/Lib/site-packages/selenium-2.53.1-py2.7.egg/selenium/webdriver/chrome/__init__.py"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -355,6 +375,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Network",
+			"mac",
+			"userid",
+			"cardid",
+			"traceback",
+			"test\\_",
+			"\\_\\d\\d\\d",
+			"\\_",
+			"_\\d",
+			"element should",
+			"#branch",
+			"device",
+			"\t ",
+			"   ",
+			"  ",
+			"       ",
+			"         ",
+			"execute",
+			"execute_script",
+			"append",
+			"switch",
+			"\t",
+			"execute",
+			"execute_script",
+			"TouchAction",
+			"IOS_UIAUTOMATION",
 			"_find_by_default",
 			"Examples",
 			"positions",
@@ -409,7 +455,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -422,24 +468,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/Administrator/Desktop/yitiji.py",
+					"file": "/D/thrift/client_branch_design.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1552,
+						"buffer_size": 14458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								253,
-								253
+								13869,
+								13869
 							]
 						],
 						"settings":
@@ -449,69 +495,40 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/Administrator/Desktop/client_test.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								312,
-								312
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": true,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9353.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/D/thrift/client.py",
+					"buffer": 1,
+					"file": "/D/thrift/gen-py/config.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19463,
+						"buffer_size": 2316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								293,
-								293
+								2050,
+								2050
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -550,7 +567,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 197.0
+		"height": 88.0
 	},
 	"output.find_results":
 	{
